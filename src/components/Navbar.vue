@@ -12,8 +12,10 @@
 </template>
 
 <script>
-  export default { }
-</script>
+  export default { 
+    name: "Navbar",
+  }
+  </script>
 
 <style scoped lang="scss">
   .navbar {
