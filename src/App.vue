@@ -1,55 +1,23 @@
 <template>
   <v-app>
-    <v-toolbar class="navbar" app>
-      <v-toolbar-title class="mr-4">Task Master</v-toolbar-title>
-      <v-toolbar-items>
-        <v-btn flat class="active"><a>Tasks</a></v-btn>
-      </v-toolbar-items>
-      <v-spacer></v-spacer>
-      <div class="username">
-        <label for="username">Logged In User:</label><input name="username" placeholder="your email address" type="text">
-      </div>
-    </v-toolbar>
-    <v-content>
-      <v-container fluid>
-        <v-layout column>
-          <v-flex xs12 class="pt-3">
-            <div class="result-container">
-              <v-layout row justify-center align-center fill-height>
-                <v-flex xs8>
-                  <v-card class="tasks">
-                    <header class="task-list-header">
-                      <h1>Task List</h1>
-                    </header>
-                    <ul class="task-list">
-                      <li class="task-item">
-                        <span class="text">Task 1</span>
-                      </li>
-
-                      <li class="task-item">
-                        <span class="text">Task 2</span>
-                      </li>
-
-                      <li class="task-item">
-                        <span class="text">Task 3</span>
-                      </li>
-                    </ul>
-                  </v-card>
-                </v-flex>
-              </v-layout>
-            </div>
-          </v-flex>
-        </v-layout>
-      </v-container>
-    </v-content>
-    <v-footer app>
-      <span class="ml-2">&copy; 2018</span><span class="ml-1">[ Your company name here ]</span>
-    </v-footer>
+    <Navbar />
+    <Tasks />
+    <Footer />
   </v-app>
 </template>
 
 <script>
-  export default { }
+ import Footer from './components/Footer';
+ import Navbar from './components/Navbar';
+ import Tasks from './components/Tasks';
+
+  export default { 
+    components: {
+      Footer,
+      Navbar,
+      Tasks,
+    }
+  }
 </script>
 
 <style scoped lang="scss">

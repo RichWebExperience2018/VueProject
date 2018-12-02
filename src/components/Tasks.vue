@@ -1,147 +1,68 @@
 <template>
-  <v-container>
-    <v-layout
-      text-xs-center
-      wrap
-    >
-      <v-flex xs12>
-        <v-img
-          :src="require('../assets/logo.svg')"
-          class="my-3"
-          contain
-          height="200"
-        ></v-img>
-      </v-flex>
+  <v-content>
+    <v-container fluid>
+      <v-layout column>
+        <v-flex xs12 class="pt-3">
+          <div class="result-container">
+            <v-layout row justify-center align-center fill-height>
+              <v-flex xs8>
+                <v-card class="tasks">
+                  <header class="task-list-header">
+                    <h1>Task List</h1>
+                  </header>
+                  <ul class="task-list">
+                    <li class="task-item">
+                      <span class="text">Task 1</span>
+                    </li>
 
-      <v-flex mb-4>
-        <h1 class="display-2 font-weight-bold mb-3">
-          Welcome to Vuetify
-        </h1>
-        <p class="subheading font-weight-regular">
-          For help and collaboration with other Vuetify developers,
-          <br>please join our online
-          <a href="https://community.vuetifyjs.com" target="_blank">Discord Community</a>
-        </p>
-      </v-flex>
+                    <li class="task-item">
+                      <span class="text">Task 2</span>
+                    </li>
 
-      <v-flex
-        mb-5
-        xs12
-      >
-        <h2 class="headline font-weight-bold mb-3">What's next?</h2>
-
-        <v-layout justify-center>
-          <a
-            v-for="(next, i) in whatsNext"
-            :key="i"
-            :href="next.href"
-            class="subheading mx-3"
-            target="_blank"
-          >
-            {{ next.text }}
-          </a>
-        </v-layout>
-      </v-flex>
-
-      <v-flex
-        xs12
-        mb-5
-      >
-        <h2 class="headline font-weight-bold mb-3">Important Links</h2>
-
-        <v-layout justify-center>
-          <a
-            v-for="(link, i) in importantLinks"
-            :key="i"
-            :href="link.href"
-            class="subheading mx-3"
-            target="_blank"
-          >
-            {{ link.text }}
-          </a>
-        </v-layout>
-      </v-flex>
-
-      <v-flex
-        xs12
-        mb-5
-      >
-        <h2 class="headline font-weight-bold mb-3">Ecosystem</h2>
-
-        <v-layout justify-center>
-          <a
-            v-for="(eco, i) in ecosystem"
-            :key="i"
-            :href="eco.href"
-            class="subheading mx-3"
-            target="_blank"
-          >
-            {{ eco.text }}
-          </a>
-        </v-layout>
-      </v-flex>
-    </v-layout>
-  </v-container>
+                    <li class="task-item">
+                      <span class="text">Task 3</span>
+                    </li>
+                  </ul>
+                </v-card>
+              </v-flex>
+            </v-layout>
+          </div>
+        </v-flex>
+      </v-layout>
+    </v-container>
+  </v-content>
 </template>
 
 <script>
-  export default {
-    data: () => ({
-      ecosystem: [
-        {
-          text: 'vuetify-loader',
-          href: 'https://github.com/vuetifyjs/vuetify-loader'
-        },
-        {
-          text: 'github',
-          href: 'https://github.com/vuetifyjs/vuetify'
-        },
-        {
-          text: 'awesome-vuetify',
-          href: 'https://github.com/vuetifyjs/awesome-vuetify'
-        }
-      ],
-      importantLinks: [
-        {
-          text: 'Documentation',
-          href: 'https://vuetifyjs.com'
-        },
-        {
-          text: 'Chat',
-          href: 'https://community.vuetifyjs.com'
-        },
-        {
-          text: 'Made with Vuetify',
-          href: 'https://madewithvuetifyjs.com'
-        },
-        {
-          text: 'Twitter',
-          href: 'https://twitter.com/vuetifyjs'
-        },
-        {
-          text: 'Articles',
-          href: 'https://medium.com/vuetify'
-        }
-      ],
-      whatsNext: [
-        {
-          text: 'Explore components',
-          href: 'https://vuetifyjs.com/components/api-explorer'
-        },
-        {
-          text: 'Select a layout',
-          href: 'https://vuetifyjs.com/layout/pre-defined'
-        },
-        {
-          text: 'Frequently Asked Questions',
-          href: 'https://vuetifyjs.com/getting-started/frequently-asked-questions'
-        }
-
-      ]
-    })
-  }
+  export default { }
 </script>
 
-<style>
+<style scoped lang="scss">
+  .result-container {
+    height: 100%;
+  }
+
+  .task-list-header {
+    position: relative;
+    padding: 1px 1px 1px 10px;
+    background: linear-gradient(to bottom, #41B683, #88D4B3 100%);
+    border-bottom: #41B683 solid 2px;
+  }
+
+  .task-list {
+    margin: 0;
+    padding: 0;
+    background: white;
+  }
+
+  .task-item {
+    position: relative;
+    box-sizing: content-box;
+    padding: 15px;
+    height: 22px;
+    list-style: none;
+    background-color: white;
+    border-bottom: #41B683 solid 1px;
+  }
 
 </style>
